@@ -1,7 +1,9 @@
 ## Glide - Xamarin Android Binding Library
 
-Glide is a fast and efficient open source media management and image loading framework for Android that wraps media
-decoding, memory and disk caching, and resource pooling into a simple and easy to use interface.
+VERSION : 4.1.1
+
+Glide is a fast and efficient image loading library for Android focused on smooth scrolling. Glide offers an easy to use API, a performant and extensible resource decoding pipeline and automatic resource pooling.
+
 
 |Fast Loading from Cache|Combine Gif with Image|
 |---|---|
@@ -11,23 +13,29 @@ decoding, memory and disk caching, and resource pooling into a simple and easy t
 ## Usage
 
 ```
-	Install-Package Glide.Xamarin
+    Install-Package Glide.Xamarin
 ```
 
-Plz follow detail guidelines from original native library [here](http://bumptech.github.io/glide/).
+Download : [Nuget Package](https://www.nuget.org/packages/Glide.Xamarin/4.1.1)
+
+Follow guideline from original native library [here](http://bumptech.github.io/glide/).
 
 A sample usage
+
 ```cs
 Glide
-	.With(this)
-	.Load("https://tinyurl.com/yb8ylrpz")
-	.Apply(RequestOptions.CircleCropTransform()).Into(imgTest);
+     .With(this)
+     .Load("Url")
+     .Apply(RequestOptions.CircleCropTransform()).Into(imgTest);
 ```
 
 Authors
 ------
 
 - Beray Bentesen -  @BerayBentesen on Twitter
+
+Contributors
+------
 - [Tuyen Vu](https://github.com/kanvuduc) @ [NAXAM](http://naxam.net)
 
 

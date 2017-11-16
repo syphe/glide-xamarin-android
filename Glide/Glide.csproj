@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
@@ -9,10 +9,10 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Glide</RootNamespace>
     <AssemblyName>Glide</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidClassParser>class-parse</AndroidClassParser>
     <NoWarn>CS0109</NoWarn>
   </PropertyGroup>
@@ -81,7 +81,21 @@
     <TransformFile Include="Transforms\Metadata.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="Jars\glide-full-4.1.1.jar" />
+    <ProjectReference Include="..\Naxam.GlideAnnotations.Droid\Naxam.GlideAnnotations.Droid.csproj">
+      <Project>{9620E7CA-292B-4040-AAF5-E5028A6C6626}</Project>
+      <Name>Naxam.GlideAnnotations.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.GlideDiskLruCache.Droid\Naxam.GlideDiskLruCache.Droid.csproj">
+      <Project>{9095A5C5-22AD-4854-BF06-83E11186216F}</Project>
+      <Name>Naxam.GlideDiskLruCache.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Naxam.GlideGifDecoder.Droid\Naxam.GlideGifDecoder.Droid.csproj">
+      <Project>{38CCEAE8-6EDE-4F85-A122-443F14B821F3}</Project>
+      <Name>Naxam.GlideGifDecoder.Droid</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\glide-4.3.1.jar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.25.4.0.2\build\MonoAndroid70\Xamarin.Android.Support.Compat.targets')" />
