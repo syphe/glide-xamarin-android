@@ -16,7 +16,7 @@ Glide is a fast and efficient image loading library for Android focused on smoot
     Install-Package Glide.Xamarin
 ```
 
-[comment]: <> Download : [Nuget Package](https://www.nuget.org/packages/Glide.Xamarin/4.1.1)
+[comment]: <> (Download : [Nuget Package](https://www.nuget.org/packages/Glide.Xamarin/4.1.1)
 
 Follow guideline from original native library [here](http://bumptech.github.io/glide/).
 
